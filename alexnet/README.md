@@ -24,9 +24,4 @@ python alexnet/compare_torch_ms.py [--num-samples 100] [--skip-convert] [--use-r
 - `--skip-convert`：跳过 pth→ckpt 转换
 - `--use-random`：用随机输入（默认用 CIFAR10 测试集，自动下载到 `data/`）
 
-## 预期结果（CIFAR10 50 样本）
 
-- logits 最大误差：约 1e-2 量级（真实图像略大于随机）
-- 预测一致率：100%（同一输入下 PT 与 MS 输出类别一致）
-
-注：AlexNet 为 ImageNet 预训练（1000 类），此处仅用 CIFAR10 作输入来源，不计算 CIFAR10 准确度。
